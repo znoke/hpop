@@ -7,11 +7,11 @@ using OpenPop.Common;
 
 namespace OpenPop.Mime.Header
 {
-	///<summary>
-	/// Utility class that divides a message into a body and a header.<br/>
-	/// The header is then parsed to a strongly typed <see cref="MessageHeader"/> object.
-	///</summary>
-	internal static class HeaderExtractor
+    ///<summary>
+    /// Utility class that divides a message into a body and a header.<br/>
+    /// The header is then parsed to a strongly typed <see cref="MessageHeader"/> object.
+    ///</summary>
+    public static class HeaderExtractor
 	{
 		/// <summary>
 		/// Find the end of the header section in a byte array.<br/>
@@ -157,12 +157,12 @@ namespace OpenPop.Mime.Header
 			return peekChar == ' ' || peekChar == '\t';
 		}
 
-		/// <summary>
-		/// Separate a full header line into a header name and a header value.
-		/// </summary>
-		/// <param name="rawHeader">The raw header line to be separated</param>
-		/// <exception cref="ArgumentNullException">If <paramref name="rawHeader"/> is <see langword="null"/></exception>
-		internal static KeyValuePair<string, string> SeparateHeaderNameAndValue(string rawHeader)
+        /// <summary>
+        /// Separate a full header line into a header name and a header value.
+        /// </summary>
+        /// <param name="rawHeader">The raw header line to be separated</param>
+        /// <exception cref="ArgumentNullException">If <paramref name="rawHeader"/> is <see langword="null"/></exception>
+        public static KeyValuePair<string, string> SeparateHeaderNameAndValue(string rawHeader)
 		{
 			if (rawHeader == null)
 				throw new ArgumentNullException("rawHeader");

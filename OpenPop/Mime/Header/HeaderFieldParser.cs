@@ -11,7 +11,7 @@ namespace OpenPop.Mime.Header
 	/// <summary>
 	/// Class that can parse different fields in the header sections of a MIME message.
 	/// </summary>
-	internal static class HeaderFieldParser
+	public static class HeaderFieldParser
 	{
 		/// <summary>
 		/// Parses the Content-Transfer-Encoding header.

@@ -7,7 +7,7 @@ namespace OpenPop.Pop3
 	/// <summary>
 	/// Implements the CRAM-MD5 algorithm as specified in <a href="http://tools.ietf.org/html/rfc2195">RFC 2195</a>.
 	/// </summary>
-	internal static class CramMd5
+	public static class CramMd5
 	{
 		/// <summary>
 		/// Defined by <a href="http://tools.ietf.org/html/rfc2104#section-2">RFC 2104</a>
@@ -35,25 +35,25 @@ namespace OpenPop.Pop3
 			}
 		}
 
-		/// <summary>
-		/// Computes the digest needed to login to a server using CRAM-MD5.<br/>
-		/// <br/>
-		/// This computes:<br/>
-		/// MD5((password XOR opad), MD5((password XOR ipad), challenge))
-		/// </summary>
-		/// <param name="username">The username of the user who wants to log in</param>
-		/// <param name="password">The password for the <paramref name="username"/></param>
-		/// <param name="challenge">
-		/// The challenge received from the server when telling it CRAM-MD5 authenticated is wanted.
-		/// Is a base64 encoded string.
-		/// </param>
-		/// <returns>The response to the challenge, which the server can validate and log in the user if correct</returns>
-		/// <exception cref="ArgumentNullException">
-		/// If <paramref name="username"/>, 
-		/// <paramref name="password"/> or 
-		/// <paramref name="challenge"/> is <see langword="null"/>
-		/// </exception>
-		internal static string ComputeDigest(string username, string password, string challenge)
+        /// <summary>
+        /// Computes the digest needed to login to a server using CRAM-MD5.<br/>
+        /// <br/>
+        /// This computes:<br/>
+        /// MD5((password XOR opad), MD5((password XOR ipad), challenge))
+        /// </summary>
+        /// <param name="username">The username of the user who wants to log in</param>
+        /// <param name="password">The password for the <paramref name="username"/></param>
+        /// <param name="challenge">
+        /// The challenge received from the server when telling it CRAM-MD5 authenticated is wanted.
+        /// Is a base64 encoded string.
+        /// </param>
+        /// <returns>The response to the challenge, which the server can validate and log in the user if correct</returns>
+        /// <exception cref="ArgumentNullException">
+        /// If <paramref name="username"/>, 
+        /// <paramref name="password"/> or 
+        /// <paramref name="challenge"/> is <see langword="null"/>
+        /// </exception>
+        public static string ComputeDigest(string username, string password, string challenge)
 		{
 			if(username == null)
 				throw new ArgumentNullException("username");

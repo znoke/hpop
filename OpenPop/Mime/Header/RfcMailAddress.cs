@@ -145,7 +145,7 @@ namespace OpenPop.Mime.Header
 		/// <see href="http://tools.ietf.org/html/rfc5322#section-3.4">RFC 5322 section 3.4</see> for more details on email syntax.<br/>
 		/// <see cref="EncodedWord.Decode">For more information about encoded text</see>.
 		/// </remarks>
-		internal static RfcMailAddress ParseMailAddress(string input)
+		public static RfcMailAddress ParseMailAddress(string input)
 		{
 			if (input == null)
 				throw new ArgumentNullException("input");
@@ -230,15 +230,15 @@ namespace OpenPop.Mime.Header
 			return new RfcMailAddress(input);
 		}
 
-		/// <summary>
-		/// Parses input of the form<br/>
-		/// <c>Eksperten mailrobot &lt;noreply@mail.eksperten.dk&gt;, ...</c><br/>
-		/// to a list of RFCMailAddresses
-		/// </summary>
-		/// <param name="input">The input that is a comma-separated list of EmailAddresses to parse</param>
-		/// <returns>A List of <seealso cref="RfcMailAddress"/> objects extracted from the <paramref name="input"/> parameter.</returns>
-		/// <exception cref="ArgumentNullException">If <paramref name="input"/> is <see langword="null"/></exception>
-		internal static List<RfcMailAddress> ParseMailAddresses(string input)
+        /// <summary>
+        /// Parses input of the form<br/>
+        /// <c>Eksperten mailrobot &lt;noreply@mail.eksperten.dk&gt;, ...</c><br/>
+        /// to a list of RFCMailAddresses
+        /// </summary>
+        /// <param name="input">The input that is a comma-separated list of EmailAddresses to parse</param>
+        /// <returns>A List of <seealso cref="RfcMailAddress"/> objects extracted from the <paramref name="input"/> parameter.</returns>
+        /// <exception cref="ArgumentNullException">If <paramref name="input"/> is <see langword="null"/></exception>
+        public static List<RfcMailAddress> ParseMailAddresses(string input)
 		{
 			if (input == null)
 				throw new ArgumentNullException("input");

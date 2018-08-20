@@ -22,7 +22,7 @@ namespace OpenPop.Mime.Decode
 	/// <c>Q</c> is the encoding method (quoted-printable). <c>B</c> is also supported (Base 64).<br/>
 	/// The encoded text is the <c>=2D</c> part which is decoded to a space.
 	/// </example>
-	internal static class EncodedWord
+	public static class EncodedWord
 	{
 		/// <summary>
 		/// Decode text that is encoded with the <see cref="EncodedWord"/> encoding.<br/>

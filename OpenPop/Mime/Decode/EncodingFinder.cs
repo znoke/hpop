@@ -54,10 +54,10 @@ namespace OpenPop.Mime.Decode
 			Reset();
 		}
 
-		/// <summary>
-		/// Used to reset this static class to facilite isolated unit testing.
-		/// </summary>
-		internal static void Reset()
+        /// <summary>
+        /// Used to reset this static class to facilite isolated unit testing.
+        /// </summary>
+        public static void Reset()
 		{
 			EncodingMap = new Dictionary<string, Encoding>();
 			FallbackDecoder = null;
@@ -73,7 +73,7 @@ namespace OpenPop.Mime.Decode
 		/// <param name="characterSet">The character set to parse</param>
 		/// <returns>An encoding which corresponds to the character set</returns>
 		/// <exception cref="ArgumentNullException">If <paramref name="characterSet"/> is <see langword="null"/></exception>
-		internal static Encoding FindEncoding(string characterSet)
+		public static Encoding FindEncoding(string characterSet)
 		{
 			if (characterSet == null)
 				throw new ArgumentNullException("characterSet");
