@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net461</TargetFramework>
+    <TargetFramework>netstandard20</TargetFramework>
     <RootNamespace>OpenPop.TestApplication</RootNamespace>
     <AssemblyName>OpenPop.NET Test Application</AssemblyName>
     <AssemblyOriginatorKeyFile>../OpenPopKeyFile.pfx</AssemblyOriginatorKeyFile>
@@ -53,14 +53,8 @@
     <Compile Update="..\OpenPop\AssemblyCommon.cs">
       <Link>AssemblyCommon.cs</Link>
     </Compile>
-    <Compile Update="ShowSourceForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="AssemblyInfo.cs">
       <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="TestForm.cs">
-      <SubType>Form</SubType>
     </Compile>
     <None Include="app.config" />
     <Content Include="Contact.ico" />
